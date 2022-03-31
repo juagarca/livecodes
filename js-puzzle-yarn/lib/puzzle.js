@@ -1,11 +1,3 @@
-// Display hint when clicking button
-const hintButton = document.querySelector('#show-hint');
-const hint = document.querySelector('.hint');
-
-hintButton.addEventListener('click', () => {
-  hint.classList.toggle('active');
-});
-
 // 1. Select all tiles
 const tiles = document.querySelectorAll('td');
 // 2. For each tile
@@ -57,8 +49,16 @@ const checkIfPlayerWins = () => {
   const tilesOrder = tilesArray.map((tile) => {
     return tile.innerText;
   });
-  // Check if their in correct order
+  // Check if they are in correct order
   if (tilesOrder.join() === "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,") {
     alert("You win!");
   }
 };
+
+// Display hint when clicking button
+const hintButton = document.querySelector('#show-hint');
+const hint = document.querySelector('.hint');
+
+hintButton.addEventListener('click', () => {
+  hint.classList.toggle('active');
+});
