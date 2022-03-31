@@ -18,7 +18,7 @@ tiles.forEach((tile) => {
       moveTile(tile);
     }
     // 6. Check if player wins
-    setTimeout(checkIfPlayerWins, 200);
+    setTimeout(() => checkIfPlayerWins(), 200);
   });
 });
 

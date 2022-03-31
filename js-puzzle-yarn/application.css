@@ -43,6 +43,6 @@ button {
   transition: .3s opacity ease;
 }
 
-.hint.active {
+.active {
   opacity: 1;
 }
