@@ -12,13 +12,12 @@ const tiles = document.querySelectorAll('td');
 tiles.forEach((tile) => {
   // 3. Listen to the click event
   tile.addEventListener('click', (event) => {
-    // 4. If it has an empty neighbor
     if (canMove(tile)) {
       // 5. Swap the tile and the empty space
       moveTile(tile);
+      // 6. Check if player wins
+      setTimeout(() => checkIfPlayerWins(), 200);
     }
-    // 6. Check if player wins
-    setTimeout(() => checkIfPlayerWins(), 200);
   });
 });
 
